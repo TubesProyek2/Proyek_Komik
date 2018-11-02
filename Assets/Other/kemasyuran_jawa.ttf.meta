@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 357fe67a8abacc24eb7a506413b7adf2
+timeCreated: 1541008231
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Kemasyuran Jawa
+  fontNames:
+  - Kemasyuran Jawa
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
