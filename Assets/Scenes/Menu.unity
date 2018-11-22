@@ -318,8 +318,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 14.6}
-  m_SizeDelta: {x: 79.9, y: 48.1}
+  m_AnchoredPosition: {x: 0, y: 8.35}
+  m_SizeDelta: {x: 101.2, y: 63.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &150713261
 MonoBehaviour:
@@ -918,8 +918,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 166.7, y: 113.23}
+  m_AnchoredPosition: {x: -3.6, y: -20}
+  m_SizeDelta: {x: 195.69, y: 162.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &935386229
 MonoBehaviour:
@@ -1000,7 +1000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9264706, g: 0.576, b: 0.07493514, a: 1}
+  m_Color: {r: 0.6102941, g: 0.22653921, b: 0.053849496, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1833,8 +1833,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 80, y: 45}
+  m_AnchoredPosition: {x: 0, y: -35.3}
+  m_SizeDelta: {x: 99.3, y: 64.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1139913956
 MonoBehaviour:
@@ -1905,7 +1905,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 228bbb8b6ea1211409acefe1700b26c6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 47c9cdabc7912924f8024b9514e0bcba, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2521,7 +2521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8718172, g: 0.768, b: 0.094, a: 1}
+  m_Color: {r: 0.49264705, g: 0.08988508, b: 0.06520329, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3274,8 +3274,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -16}
-  m_SizeDelta: {x: 79.08, y: 43.2}
+  m_AnchoredPosition: {x: 0, y: -69.9}
+  m_SizeDelta: {x: 104.52, y: 59.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913217202
 MonoBehaviour:
