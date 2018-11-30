@@ -14,6 +14,6 @@ MonoBehaviour:
   m_DirectComputeShader: {fileID: 0}
   m_ComputeShader: {fileID: 7200000, guid: c7ec407cd72c1a141aca3a14ee4ebbe6, type: 3}
   m_OpenCLShader: {fileID: 4900000, guid: 259a5b51b54086a48b371e6c56473876, type: 3}
-  m_OpenCLEditorIncludePath: Assets/Fluvio/Resources/ComputeShaders/Solvers/FluidSolver/_MainAsset.asset
+  m_OpenCLEditorIncludePath: Assets/Other/Fluvio/Resources/ComputeShaders/Solvers/FluidSolver/_MainAsset.asset
   m_OpenCLIncludePaths: []
   m_OpenCLIncludeSource: []
