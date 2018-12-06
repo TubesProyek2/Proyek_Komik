@@ -3,32 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PrologEpilog : MonoBehaviour
+public class Prolog : MonoBehaviour
 {
     private bool clicked = false;
     private byte alpha;
     
-    public bool initTrans;
     public RawImage blackBackground;
-    public string word;
+    [TextArea] public string word;
     public Text text;
 
     void Start()
     {
         text.text = word;
-
-        if (initTrans)
-        { this.alpha = 0; this.enabled = false; }
-        else
-        { this.alpha = 255; }
-
+        
         text.color = new Color32(255, 255, 255, alpha);
         blackBackground.color = new Color32(0, 0, 0, alpha);
     }
 
     void Update()
     {
-        if (initTrans)
+        if (true)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -56,7 +50,7 @@ public class PrologEpilog : MonoBehaviour
 
         if (clicked)
         {
-            if (initTrans)
+            if (true)
             {
                 Debug.Log("tes");
             }
@@ -69,8 +63,10 @@ public class PrologEpilog : MonoBehaviour
                     Debug.Log(alpha);
                     alpha -= 5;
                     Color color = new Color32(0, 0, 0, alpha);
-                    blackBackground.color = new Color(blackBackground.color.r, blackBackground.color.g, blackBackground.color.b, color.a);
-                    text.color = new Color(text.color.r, text.color.g, text.color.b, color.a);
+                    blackBackground.color = new Color(blackBackground.color.r, blackBackground.color.g, blackBackground.color.b, color.a * Time.deltaTime);
+                    text.color = new Color(text.color.r, text.color.g, text.color.b, color.a * Time.deltaTime);
+                    //blackBackground.color = new Color32(0, 0, 0, alpha);
+                    //text.color = new Color32(255, 255, 255, alpha);
                 }
             }
             

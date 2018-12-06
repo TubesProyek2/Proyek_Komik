@@ -7,17 +7,14 @@ public class Dialog : MonoBehaviour
 {
     private bool triggered;
     public GameObject mpu, mpuSit;
-    public string[] speakers;
-    public string[] words;
-    public RawImage textBox;
+    [TextArea] public string[] speakers;
+    [TextArea] public string[] words;
     public Text speakerBox, dialogBox;
     private int currentlyDisplayingText = 0;
     
     void Start()
     {
-        textBox.enabled = false;
-        speakerBox.enabled = false;
-        dialogBox.enabled = false;
+        speakerBox.enabled = false; dialogBox.enabled = false;
         mpu.SetActive(true);
         mpuSit.SetActive(false);
     }
@@ -26,9 +23,7 @@ public class Dialog : MonoBehaviour
     {
         if (other.gameObject.name == mpu.name)
         {
-            textBox.enabled = true;
-            speakerBox.enabled = true;
-            dialogBox.enabled = true;
+            speakerBox.enabled = true; dialogBox.enabled = true;
             mpu.SetActive(false);
             mpuSit.SetActive(true);
             StartCoroutine(AnimateText());

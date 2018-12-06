@@ -5,20 +5,59 @@ using UnityEngine.UI;
 
 public class FadeBlack : MonoBehaviour
 {
-    public bool fadeTo;
-    public GameObject mpu;
-    public RawImage black;
+    private bool entered = false;
+    private byte alpha = 0;
+
+    public Dialog dialog;
+    public GameObject mpu, mpuSit;
+    public RawImage black, wordsBox;
+    public Text speakerBox, dialogBox;
+
+    void Start()
+    {
+        dialog.enabled = false;
+        mpu.SetActive(true);
+        mpuSit.SetActive(false);
+        black.color = new Color32(0, 0, 0, alpha);
+    }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == mpu.name)
+        { entered = true; }
+    }
+
+    void Update()
+    {
+        if(entered)
         {
-            textBox.enabled = true;
-            speakerBox.enabled = true;
-            dialogBox.enabled = true;
-            mpu.SetActive(false);
-            mpuSit.SetActive(true);
-            StartCoroutine(AnimateText());
+            for (int i = alpha; i < 0; i++)
+            {
+                alpha += 5;
+                Color col = new Color32(0, 0, 0, alpha);
+                black.color = new Color(black.color.r, black.color.g, black.color.b, col.a * Time.deltaTime);
+
+                //black.color = new Color32(0, 0, 0, alpha);
+            }
+
+            if(alpha==255)
+            {
+                mpu.SetActive(false);
+                mpuSit.SetActive(true);
+                dialog.enabled = true;
+            }
+        }
+
+        if (mpuSit.activeSelf)
+        {
+            for (int i = alpha; i > 0; i--)
+            {
+                alpha -= 5;
+                Color col = new Color32(0, 0, 0, alpha);
+                black.color = new Color(black.color.r, black.color.g, black.color.b, col.a * Time.deltaTime);
+
+                //black.color = new Color32(0, 0, 0, alpha);
+            }
         }
     }
 }
