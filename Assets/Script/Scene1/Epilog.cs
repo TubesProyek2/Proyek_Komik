@@ -1,21 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Epilog : MonoBehaviour
 {
-    private bool clicked = false;
     private byte alpha = 0;
     
     public RawImage black;
+    public string scene;
     [TextArea] public string word;
     public Text text;
 
     void Awake()
-    {
-        enabled = false;
-    }
+    { enabled = false; }
 
     void Start()
     {
@@ -29,22 +28,20 @@ public class Epilog : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        { clicked = true; }
-        
-        if (clicked)
+        if (alpha == 255)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                SceneManager.LoadScene(scene);
+                enabled = false;
+            }
+        }
+        else
         {
             alpha += 15;
             black.color = new Color32(0, 0, 0, alpha);
             text.color = new Color32(255, 255, 255, alpha);
-            
-            if (alpha == 255)
-            {
-                black.enabled = true;
-                text.enabled = false;
-                clicked = false;
-                enabled = false;
-            }
         }
+        
     }
 }

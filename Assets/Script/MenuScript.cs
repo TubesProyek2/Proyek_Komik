@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
+    public string scene;
+
+    void Start()
+    { Screen.SetResolution(800, 600, true); }
+
     public void PlayTheGame()
-    { SceneManager.LoadScene("Scene1"); }
+    { SceneManager.LoadScene(scene); }
     
     public void ExitTheGame()
     { Application.Quit(); }

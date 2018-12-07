@@ -32,19 +32,19 @@ public class Dialog : MonoBehaviour
     {
         StopAllCoroutines();
         
-        currentlyDisplayingSpeaker++; Debug.Log("sbef" + currentlyDisplayingSpeaker); Debug.Log("sl" + speaker.Length);
+        currentlyDisplayingSpeaker++;
         if (currentlyDisplayingSpeaker > speaker.Length-1)
         { currentlyDisplayingSpeaker = 0; }
-        Debug.Log("saf" + currentlyDisplayingSpeaker);
 
-        currentlyDisplayingText++; Debug.Log("t" + currentlyDisplayingText); Debug.Log("tl" + words.Length);
+        currentlyDisplayingText++;
         if (currentlyDisplayingText > words.Length-1)
         {
-            
+            StopAllCoroutines();
+            epilogScript.enabled = true;
             enabled = false;
         }
-        
-        StartCoroutine(AnimateText());
+        else
+        { StartCoroutine(AnimateText()); }
     }
 
     IEnumerator AnimateText()

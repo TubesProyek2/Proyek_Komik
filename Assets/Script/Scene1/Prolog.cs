@@ -14,6 +14,7 @@ public class Prolog : MonoBehaviour
 
     void Start()
     {
+        Screen.SetResolution(800, 600, true);
         black.enabled = true;
         text.enabled = true;
         text.text = word;
