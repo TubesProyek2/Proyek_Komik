@@ -1,24 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-    public void OnClickMulai()
-    { Application.LoadLevel("Prolog"); }
-
-    public void OnClickBantuan()
-    { Application.LoadLevel("Bantuan"); }
-
-    public void OnClickTentang()
-    { Application.LoadLevel("Tentang"); }
-
-    public void OnClickKembali()
-    { Application.LoadLevel("MainMenu"); }
-
-    public void OnClickLanjut()
-    { Application.LoadLevel("Stage1"); }
-
-    public void Keluar()
+    public void PlayTheGame()
+    { SceneManager.LoadScene("Scene1"); }
+    
+    public void ExitTheGame()
     { Application.Quit(); }
 }

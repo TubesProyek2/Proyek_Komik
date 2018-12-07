@@ -6,56 +6,62 @@ using UnityEngine.UI;
 public class Dialog : MonoBehaviour
 {
     private bool triggered;
-    public GameObject mpu, mpuSit;
-    [TextArea] public string[] speakers;
-    [TextArea] public string[] words;
-    public Text speakerBox, dialogBox;
-    private int currentlyDisplayingText = 0;
+    private int currentlyDisplayingText = 0, currentlyDisplayingSpeaker = 0;
+
+    public Epilog epilogScript;
+    public RawImage black, dialogBox;
+    [TextArea] public string[] speaker, words;
+    public Text speakerBox, wordsBox;
     
+    void Awake()
+    {
+        dialogBox.enabled = false;
+        speakerBox.enabled = false; wordsBox.enabled = false;
+        enabled = false;
+    }
+
     void Start()
     {
-        speakerBox.enabled = false; dialogBox.enabled = false;
-        mpu.SetActive(true);
-        mpuSit.SetActive(false);
-    }
-    
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == mpu.name)
-        {
-            speakerBox.enabled = true; dialogBox.enabled = true;
-            mpu.SetActive(false);
-            mpuSit.SetActive(true);
-            StartCoroutine(AnimateText());
-        }
+        dialogBox.enabled = true;
+        speakerBox.enabled = true; wordsBox.enabled = true;
+        speakerBox.text = ""; wordsBox.text = "";
+        StartCoroutine(AnimateText());
     }
 
     public void SkipToNextText()
     {
         StopAllCoroutines();
-        currentlyDisplayingText++;
-        dialogBox.text = words[currentlyDisplayingText];
+        
+        currentlyDisplayingSpeaker++; Debug.Log("sbef" + currentlyDisplayingSpeaker); Debug.Log("sl" + speaker.Length);
+        if (currentlyDisplayingSpeaker > speaker.Length-1)
+        { currentlyDisplayingSpeaker = 0; }
+        Debug.Log("saf" + currentlyDisplayingSpeaker);
 
-        if (currentlyDisplayingText > words.Length)
-        { currentlyDisplayingText = 0; }
-
-        if (Input.GetMouseButtonDown(0))
-        { StartCoroutine(AnimateText()); }
+        currentlyDisplayingText++; Debug.Log("t" + currentlyDisplayingText); Debug.Log("tl" + words.Length);
+        if (currentlyDisplayingText > words.Length-1)
+        {
+            
+            enabled = false;
+        }
+        
+        StartCoroutine(AnimateText());
     }
 
     IEnumerator AnimateText()
     {
-        for (int i = 0; i < (words[currentlyDisplayingText].Length + 1); i++)
-        {
-            dialogBox.text = words[currentlyDisplayingText].Substring(0, i);
+        for (int j = 0; j < (speaker[currentlyDisplayingSpeaker].Length); j++)
+        { speakerBox.text = speaker[currentlyDisplayingSpeaker]; }
 
+        for (int i = 0; i < (words[currentlyDisplayingText].Length); i++)
+        {
+            wordsBox.text = words[currentlyDisplayingText].Substring(0, i);
             yield return new WaitForSeconds(.01f);
         }
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        { SkipToNextText(); }
+        if (black.color.a==0 && Input.GetMouseButtonDown(0))
+        { SkipToNextText(); } 
     }
 }

@@ -6,70 +6,40 @@ using UnityEngine.UI;
 public class Prolog : MonoBehaviour
 {
     private bool clicked = false;
-    private byte alpha;
+    private byte alpha = 255;
     
-    public RawImage blackBackground;
+    public RawImage black;
     [TextArea] public string word;
     public Text text;
 
     void Start()
     {
+        black.enabled = true;
+        text.enabled = true;
         text.text = word;
-        
+
+        black.color = new Color32(0, 0, 0, alpha);
         text.color = new Color32(255, 255, 255, alpha);
-        blackBackground.color = new Color32(0, 0, 0, alpha);
     }
 
     void Update()
     {
-        if (true)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Debug.Log("klik");
-                for (int i = alpha; i <= 255; i++)
-                {
-                    Debug.Log("for");
-                    alpha += 5;
-                    Color color = new Color32(0, 0, 0, alpha);
-                    blackBackground.color = new Color(blackBackground.color.r, blackBackground.color.g, blackBackground.color.b, color.a);
-                }
-            }
-
-            if (alpha == 255) { Destroy(this); }
-        }
-        else
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                clicked = true;
-            }
-
-            if (alpha == 0) { Destroy(this); }
-        }
-
+        if (Input.GetMouseButtonDown(0))
+        { clicked = true; }
+        
         if (clicked)
         {
-            if (true)
-            {
-                Debug.Log("tes");
-            }
-            else
-            {
-                Debug.Log("klik");
-                for (int i = alpha; i > 0; i--)
-                {
-                    Debug.Log("for");
-                    Debug.Log(alpha);
-                    alpha -= 5;
-                    Color color = new Color32(0, 0, 0, alpha);
-                    blackBackground.color = new Color(blackBackground.color.r, blackBackground.color.g, blackBackground.color.b, color.a * Time.deltaTime);
-                    text.color = new Color(text.color.r, text.color.g, text.color.b, color.a * Time.deltaTime);
-                    //blackBackground.color = new Color32(0, 0, 0, alpha);
-                    //text.color = new Color32(255, 255, 255, alpha);
-                }
-            }
+            alpha -= 15;
+            black.color = new Color32(0, 0, 0, alpha);
+            text.color = new Color32(255, 255, 255, alpha);
             
+            if (alpha == 0)
+            {
+                black.enabled = false;
+                text.enabled = false;
+                clicked = false;
+                enabled = false;
+            }
         }
     }
 }
