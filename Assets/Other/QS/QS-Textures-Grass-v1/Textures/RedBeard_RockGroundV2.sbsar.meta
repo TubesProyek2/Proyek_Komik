@@ -115,7 +115,7 @@ SubstanceImporter:
       texEnvs:
       - _BumpMap:
           texture: {instanceID: 0}
-          scale: {x: 2.17, y: 2.48}
+          scale: {x: 2, y: 2.48}
           offset: {x: 0, y: 0}
       - _DetailAlbedoMap:
           texture: {instanceID: 0}
@@ -143,11 +143,11 @@ SubstanceImporter:
           offset: {x: 0, y: 0}
       - _OcclusionMap:
           texture: {instanceID: 0}
-          scale: {x: 2.17, y: 2.48}
+          scale: {x: 2, y: 2.48}
           offset: {x: 0, y: 0}
       - _ParallaxMap:
           texture: {instanceID: 0}
-          scale: {x: 2.17, y: 2.48}
+          scale: {x: 2, y: 2.48}
           offset: {x: 0, y: 0}
       floats:
       - _BumpScale: 2
