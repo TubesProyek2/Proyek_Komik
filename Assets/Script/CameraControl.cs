@@ -11,7 +11,7 @@ public class CameraControl : MonoBehaviour
     public Transform camTransform;
     public float distance = 10.0f;
 
-    private float currentX = -90.0f;
+    public float currentX = -90.0f;
     private float currentY = 0.0f;
     public float sensitivityX = 5.0f;
     public float sensitivityY = 5.0f;
