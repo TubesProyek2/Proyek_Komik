@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa601672ba316e84280839358880eae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 747659265}
   marker: {fileID: 607821878}
   mapGUI: {fileID: 1612916696}
   height: 10
@@ -1275,7 +1275,7 @@ Prefab:
         type: 2}
       propertyPath: lookAt
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1298441026}
     - target: {fileID: 114248582998743520, guid: bea289c624534954abf6cc8a11350ea5,
         type: 2}
       propertyPath: currentX
@@ -1661,6 +1661,11 @@ Prefab:
 --- !u!1 &747659259 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1557093771406508, guid: d01f6d966ec12f146b2d5e65f089238d,
+    type: 2}
+  m_PrefabInternal: {fileID: 747659258}
+--- !u!4 &747659265 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4245726882250180, guid: d01f6d966ec12f146b2d5e65f089238d,
     type: 2}
   m_PrefabInternal: {fileID: 747659258}
 --- !u!1 &751487287
@@ -2061,7 +2066,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -535284798
+  randomSeed: 1164681438
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6150,6 +6155,11 @@ Transform:
   m_Father: {fileID: 2106687418}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -66.318, y: 0, z: -33.479}
+--- !u!4 &1298441026 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4490632658530112, guid: d01f6d966ec12f146b2d5e65f089238d,
+    type: 2}
+  m_PrefabInternal: {fileID: 747659258}
 --- !u!1 &1313391927
 GameObject:
   m_ObjectHideFlags: 0
@@ -6499,6 +6509,7 @@ GameObject:
   - component: {fileID: 1468084083}
   - component: {fileID: 1468084085}
   - component: {fileID: 1468084084}
+  - component: {fileID: 1468084086}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -6604,6 +6615,86 @@ MonoBehaviour:
   - SUPO SEDANG MENCARI WANGSIT UNTUK MENDAPATKAN TEMPAT SUMBER MATA AIR
   speakerBox: {fileID: 645157792}
   wordsBox: {fileID: 1720439173}
+--- !u!82 &1468084086
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1468084079}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7fe80ee370c5a2b489da021494d30ad1, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1471763373 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: d276b9efab252b3438c06cfe0d0588fa, type: 3}
