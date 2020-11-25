@@ -49,10 +49,10 @@ public class Dialog : MonoBehaviour
 
     IEnumerator AnimateText()
     {
-        for (int j = 0; j < (speaker[currentlyDisplayingSpeaker].Length); j++)
+        for (int j = 0; j <= (speaker[currentlyDisplayingSpeaker].Length); j++)
         { speakerBox.text = speaker[currentlyDisplayingSpeaker]; }
 
-        for (int i = 0; i < (words[currentlyDisplayingText].Length); i++)
+        for (int i = 0; i <= (words[currentlyDisplayingText].Length); i++)
         {
             wordsBox.text = words[currentlyDisplayingText].Substring(0, i);
             yield return new WaitForSeconds(.01f);

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6612,7 +6612,7 @@ MonoBehaviour:
   - . . . . .
   words:
   - DALAM PERTAPAANNYA SUPO TAK HENTINYA MEMBACA MANTRA
-  - SUPO SEDANG MENCARI WANGSIT UNTUK MENDAPATKAN TEMPAT SUMBER MATA AIR
+  - SUPO SEDANG MENCARI PETUNJUK UNTUK MENDAPATKAN TEMPAT SUMBER MATA AIR
   speakerBox: {fileID: 645157792}
   wordsBox: {fileID: 1720439173}
 --- !u!82 &1468084086
